@@ -1,7 +1,7 @@
 let filters = document.querySelectorAll('.filter__title'),
     check = document.querySelectorAll('.location-item'),
     locationBtn = document.querySelector('.location-btn'),
-    row = document.querySelector('.main__row'),
+    row = document.querySelector('.item-main'),
     mainBtn = document.querySelector('.main__btn'),
     extraItems = document.querySelector('.item-extra'),
     items = document.querySelector('.extra-items'),
@@ -36,8 +36,12 @@ locationBtn.addEventListener('click', function(event) {
 /* Add new row */
     mainBtn.addEventListener('click', function() {
         event.preventDefault();
-        let rows = row.cloneNode(true);
-        row.after(rows);
+        let row1 = row.cloneNode(true),
+            row2 = row.cloneNode(true),
+            row3 = row.cloneNode(true);
+            row.after(row1);
+            row.after(row2);
+            row.after(row3);
     });
 
 /* Open extra items is additional filter */
